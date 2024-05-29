@@ -17,7 +17,7 @@ module.exports = defineConfig({
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
   },
-  testDir: './test/playwright',
+  testDir: './playwright',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
