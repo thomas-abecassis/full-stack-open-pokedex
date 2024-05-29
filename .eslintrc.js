@@ -1,6 +1,7 @@
 module.exports = {
   ignores: [".eslint.js"],
   "env": {
+    "node": true,
     "browser": true,
     "es6": true,
     "jest/globals": true
@@ -22,8 +23,8 @@ module.exports = {
   "rules": {
     "indent": [
       "error",
-        2
-      ],
+      2
+    ],
     "linebreak-style": [
       "error",
       "unix"
