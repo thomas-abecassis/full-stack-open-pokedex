@@ -1,13 +1,12 @@
-# fly.toml app configuration file generated for citestproject on 2024-05-30T13:57:24+02:00
+# fly.toml app configuration file generated for full-stack-open-citest on 2024-05-30T14:24:01+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'citestproject'
+app = 'full-stack-open-citest'
 primary_region = 'cdg'
 
-[env]
-  PORT = "3000" # add this where PORT matches the internal_port below
+[build]
 
 [http_service]
   internal_port = 3000
