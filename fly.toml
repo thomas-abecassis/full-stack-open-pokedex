@@ -10,6 +10,9 @@ primary_region = 'cdg'
 
 [env]
   PORT = "3000" # add this
+  
+[processes]
+  app = "node app.js" # add this
 
 [http_service]
   internal_port = 3000
@@ -17,7 +20,7 @@ primary_region = 'cdg'
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ['app']
+  processes = ["app"]
 
 [[vm]]
   memory = '1gb'
