@@ -36,12 +36,12 @@ jobs:
           retention-days: 30
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Deploy to fly
-        if: ${{ github.event_name == 'push' && contains(join(github.event.commits.*.message), '#skip') }}
+        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip') }}
         run: flyctl deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
   tag_release:
-    if: ${{ github.event_name == 'push' && contains(join(github.event.commits.*.message), '#skip')}}
+    if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip')}}
     needs: [deployment]
     runs-on: ubuntu-20.04
     steps:
